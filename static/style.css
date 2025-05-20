@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #f5f5dc; 
+    color: #333;
+    padding-top: 70px; 
+
+}
+
+
+.navbar-brand {
+    color: white; 
+}
+
+.custom-navbar {
+    background-color: white; 
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: black; 
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #FF6A00; 
+}
+.btn-outline-success {
+    border-color: #FF6A00; 
+    color: #FF6A00; 
+}
+.btn-outline-success:hover {
+    background-color: #FF6A00 !important; 
+    color: white !important; 
+    border-color: #FF6A00 !important; 
+}
+
+
+.logo h1 {
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ff8c00;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-text {
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: none; 
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #333; 
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    background: none;
+}
+
+.hero-content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.hero .btn:hover {
+    background-color: #e07b00;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    perspective: 1000px; 
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background: none;
+
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: none;
+    background: none;
+    
+
+}
+
+.card-front {
+    background: none;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: none;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.card-body h3,
+.card-body h5,
+.card-body p {
+    margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
+
+
+footer {
+    background-color: #57009E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.color1 {
+    color: #57009E; 
+}
+
+.color2 {
+    color: #08009E; 
+}
+
+.color3 {
+    color: #FF6A00; 
+}
+
+.title-black {
+    color: black;
+}
+.title-white {
+    color: white;
+}
+
+.newsletter-section {
+    background: url('images/colorful.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-form {
+    max-width: 400px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .newsletter-form .btn {
+    width: 100%;
+  }
+  
+.top-bar {
+    background: #f8f9fa;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.lang-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.image-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: none; 
+    padding: 10px 0;
+}
+
+.image-track {
+    display: flex;
+    gap: 20px;
+    animation: scrollImages 15s linear infinite;
+}
+
+.image-track img {
+    width: 250px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scrollImages {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+

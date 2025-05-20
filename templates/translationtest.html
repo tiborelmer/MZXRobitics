@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Traduction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            padding-top: 50px; 
+        }
+
+        .google-translate-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #007BFF;
+            padding: 10px 0;
+            z-index: 1000; 
+            text-align: center;
+        }
+
+        .google-translate-bar select {
+            font-size: 1rem;
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        #google_translate_element select:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,es,de,it,ja', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="google-translate-bar">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome on our site</h1>
+        <p>We are committed to simplifying human life through intelligent machines.</p>
+        
+        <footer>
+            <p>&copy; 2025 MZX Robotics. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

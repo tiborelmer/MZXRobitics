@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - MZX Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+.cart a,
+.user-auth a {
+    color: white;
+    font-weight: 600;
+}
+
+.user-auth .btn {
+    margin-left: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #007bff;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card h5 {
+    color: #555;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+footer {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+    </style>
+</head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h3 class="title-black"> MZX Robotics</h3>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('brands') }}">Brands</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Shipping</a></li>
+                  <li><a class="dropdown-item" href="#">Payment</a></li>
+                  <li><a class="dropdown-item" href="#">General terms and conditions</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="google-translate-bar">
+          <div id="google_translate_element"></div>
+        </div>
+      </nav>
+      
+
+        </section>
+
+        <h1 class="text-center mb-4">Our Brands</h1>
+        <section class="content">
+          
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/Dobot.png') }}" alt="Produit 1" class="card-img-top">
+                <div class="card-body">
+                    <h3>Dobot Robotics</h3>
+                    <h5>Precise machines, for precise needs.</h5>
+                    <p>We live in the era of INDUSTRY 4.0 , where the machines of today have the capacity to not only perform its duties as precise and fast as never before, but at the same time keep all of it's collegues safe in it's environment. Robotics companies design it's industrial grade products not only for aesthetics, but for overcoming relevant problems in the corresponding segment too.
+    
+                        Therefore our industrial robots lineup has machines and solutions for some of the most often automated tasks for the industry. If you are interested in what makes COBOTS so safe to operate, what does SCARA mean, or which technologies are used to make the robot memorize 10.00m2 of area and navigate in it with millimeter accuracy, take a look inside the menus, and find your best solution!
+                        
+                        Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+                </div>
+                <a href="{{ url_for('industrialrobotics') }}" class="btn btn-primary">See More</a>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/UBT.png') }}" alt="Produit 2" class="card-img-top">
+                <div class="card-body">
+                    <h3>UBTech Robotics</h3>
+                    <h5>Relax, with the help of technology</h5>
+                    <p>We always want to escape from the complications of a new workforce who needs months to know all the procedures of His/Her work, or the struggle of finding a trsuted person to watch ut for our cat while we are on vacation. The tasks are easy, so why not to automate them?
+    
+                        Our category called Service robots help in just the same thing. The products of this lineup represent some of the fields, in which robotics found a way to make your job easier. In here you can find scrubber robots, service robots, informant robot, and other helpers who will satisfy your needs so the only thing you need to worry about is the date of your next vacation.
+                        
+                        Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+    
+                </div>
+                <a href="{{ url_for('servicerobotics') }}" class="btn btn-primary">See More</a>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/KABAM Logo (Blue).png') }}" alt="Produit 2" class="card-img-top">
+                <div class="card-body">
+                    <h3>Kabam Robotics</h3>
+                    <h5>Relax, with the help of technology</h5>
+                    <p>We always want to escape from the complications of a new workforce who needs months to know all the procedures of His/Her work, or the struggle of finding a trsuted person to watch ut for our cat while we are on vacation. The tasks are easy, so why not to automate them?
+    
+                        Our category called Service robots help in just the same thing. The products of this lineup represent some of the fields, in which robotics found a way to make your job easier. In here you can find scrubber robots, service robots, informant robot, and other helpers who will satisfy your needs so the only thing you need to worry about is the date of your next vacation.
+                        
+                        Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+    
+                </div>
+                <a href="{{ url_for('servicerobotics') }}" class="btn btn-primary">See More</a>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/Sparkoz.png') }}" alt="Produit 2" class="card-img-top">
+                <div class="card-body">
+                    <h3>Sparkoz Robotics</h3>
+                    <h5>Relax, with the help of technology</h5>
+                    <p>We always want to escape from the complications of a new workforce who needs months to know all the procedures of His/Her work, or the struggle of finding a trsuted person to watch ut for our cat while we are on vacation. The tasks are easy, so why not to automate them?
+    
+                        Our category called Service robots help in just the same thing. The products of this lineup represent some of the fields, in which robotics found a way to make your job easier. In here you can find scrubber robots, service robots, informant robot, and other helpers who will satisfy your needs so the only thing you need to worry about is the date of your next vacation.
+                        
+                        Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+    
+                </div>
+                <a href="{{ url_for('servicerobotics') }}" class="btn btn-primary">See More</a>
+            </div>
+            
+        </section>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 MZX Robotics. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MZX Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-bar fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="language-selector">
+                <select class="form-select" id="languageSelect">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                </select>
+            </div>
+            <div class="cart">
+                <a href="#" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> <span>Cart (0)</span>
+                </a>
+            </div>
+            <div class="user-auth">
+                <a href="#" class="btn btn-outline-light btn-sm">Login</a>
+                <a href="#" class="btn btn-light btn-sm">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h3 class="title-black"> MZX Robotics</h3>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Shipping</a></li>
+                  <li><a class="dropdown-item" href="#">Payment</a></li>
+                  <li><a class="dropdown-item" href="#">General terms and conditions</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="google-translate-bar">
+            <div id="google_translate_element"></div>
+        </div>
+      </nav>
+
+    <section class="container my-5">
+        <h1 class="text-center mb-4">About MZX Robotics</h1>
+        <p class="text-center text-muted">Shaping the future of robotics with AI-driven innovation.</p>
+    </section>
+
+    <section class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-light">
+                    <h3 class="text-primary"><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>MZX Robotics is dedicated to simplifying human life through intelligent machines. We focus on:</p>
+                    <ul>
+                        <li>Developing high-performance robotic solutions.</li>
+                        <li>Integrating AI into industrial processes.</li>
+                        <li>Enhancing automation for sustainability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-light">
+                    <h3 class="text-primary"><i class="fas fa-robot"></i> Our Expertise</h3>
+                    <p>We specialize in:</p>
+                    <ul>
+                        <li><strong>Industrial Robotics:</strong> Manufacturing automation.</li>
+                        <li><strong>Service Robots:</strong> Business and public space assistants.</li>
+                        <li><strong>Educational Robotics:</strong> AI-powered learning tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center">Our Key Products</h2>
+    </section>
+
+    <section class="content">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Indus.jpg') }}" alt="Produit 1" class="card-img-top">
+            <div class="card-body">
+                <h3>Industrial Robotics</h3>
+                <h5>Precise machines, for precise needs.</h5>
+                <p>We live in the era of INDUSTRY 4.0 , where the machines of today have the capacity to not only perform its duties as precise and fast as never before, but at the same time keep all of it's collegues safe in it's environment. Robotics companies design it's industrial grade products not only for aesthetics, but for overcoming relevant problems in the corresponding segment too.
+
+                    Therefore our industrial robots lineup has machines and solutions for some of the most often automated tasks for the industry. If you are interested in what makes COBOTS so safe to operate, what does SCARA mean, or which technologies are used to make the robot memorize 10.00m2 of area and navigate in it with millimeter accuracy, take a look inside the menus, and find your best solution!
+                    
+                    Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+            </div>
+            <a href="{{ url_for('industrialrobotics') }}" class="btn btn-primary">See More</a>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/10831431_a3295102041_plx.jpg') }}" alt="Produit 2" class="card-img-top">
+            <div class="card-body">
+                <h3>Service Robots</h3>
+                <h5>Relax, with the help of technology</h5>
+                <p>We always want to escape from the complications of a new workforce who needs months to know all the procedures of His/Her work, or the struggle of finding a trsuted person to watch ut for our cat while we are on vacation. The tasks are easy, so why not to automate them?
+
+                    Our category called Service robots help in just the same thing. The products of this lineup represent some of the fields, in which robotics found a way to make your job easier. In here you can find scrubber robots, service robots, informant robot, and other helpers who will satisfy your needs so the only thing you need to worry about is the date of your next vacation.
+                    
+                    Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.</p>
+
+            </div>
+            <a href="{{ url_for('servicerobotics') }}" class="btn btn-primary">See More</a>
+        </div>
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/Educ.jpg') }}" alt="Produit 3" class="card-img-top">
+            <div class="card-body">
+                <h3>Educational Robotics</h3>
+                <h5>The next evolution of education for all ages.</h5>
+                <p>As artificial intelligence getting more and more sophisticated algorithms to support the journey of studying, so does the robots, which intentions are not only to make children and grown-ups understand the basic concepts, but to have fun in the process too!
+
+                    There are many interesting solutions in the introduction to robotics, which are now combined with the capabilities of artificial intelligence. This improvement makes educational robots more intelligent, more helpful, and more supportive to the students. In the educational robotics section, you can find robots with skills for learning the most crucial concept of how robots work and how can you program them to suit your needs, as well as very advanced robotic kits, so you could build your very own intelligent robot, with the support for low level programming!
+                    
+                    Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.
+                    
+                    </p>
+            </div>
+            <a href="{{ url_for('educrobotics') }}" class="btn btn-primary">See More</a>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
+        <h2>Why Choose Us?</h2>
+        <p>We believe in innovation, reliability, and quality service.</p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <i class="fas fa-award fa-3x text-primary"></i>
+                <h4>Quality</h4>
+                <p>Top-tier robotic solutions built for excellence.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-users fa-3x text-primary"></i>
+                <h4>Expertise</h4>
+                <p>A team of passionate engineers and AI specialists.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-headset fa-3x text-primary"></i>
+                <h4>Support</h4>
+                <p>Fast customer service and tech support.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 MZX Robotics. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

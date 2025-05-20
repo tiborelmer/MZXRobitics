@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MZX Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with translation</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,es,de,it,ja,hu,fr,sk', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+
+
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h3 class="title-black"> MZX Robotics</h3>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('products') }}">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('brands') }}">Brands</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Shipping</a></li>
+                  <li><a class="dropdown-item" href="#">Payment</a></li>
+                  <li><a class="dropdown-item" href="#">General terms and conditions</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="google-translate-bar">
+            <div id="google_translate_element"></div>
+        </div>
+      </nav>
+
+    <div id="google_translate_element"></div>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
+
+      <section class="hero">
+        <div class="slideshow">
+            <img src="{{ url_for('static', filename='images/Alpha.png') }}" alt="Alpha">
+            <img src="{{ url_for('static', filename='images/CruzR.png') }}" alt="CruzR">
+            <img src="{{ url_for('static', filename='images/Arm.png') }}" alt="Arm">
+        </div>
+    </section>
+
+
+
+    
+    <div class="hero-text">
+        <h1 class="title-black">Welcome to MZX Robotics!</h1>
+        <p>
+            <span class="color1">New ideas</span>, 
+            <span class="color2">New technologies</span>, 
+            <span class="color3">New webpage!</span>
+        </p>
+    </div>
+
+    <section class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/Indus.jpg') }}" alt="Produit 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Industrial Robotics</h3>
+                        <h5>Precise machines, for precise needs.</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        We live in the era of INDUSTRY 4.0 , where the machines of today have the capacity to not only perform its duties as precise and fast as never before, but at the same time keep all of it's collegues safe in it's environment. Robotics companies design it's industrial grade products not only for aesthetics, but for overcoming relevant problems in the corresponding segment too. Therefore our industrial robots lineup has machines and solutions for some of the most often automated tasks for the industry. If you are interested in what makes COBOTS so safe to operate, what does SCARA mean, or which technologies are used to make the robot memorize 10.00m2 of area and navigate in it with millimeter accuracy, take a look inside the menus, and find your best solution! Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.
+                    </p>
+                    <a href="{{ url_for('industrialrobotics') }}" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/10831431_a3295102041_plx.jpg') }}" alt="Produit 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Service Robots</h3>
+                        <h5>Relax, with the help of technology</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        We always want to escape from the complications of a new workforce who needs months to know all the procedures of His/Her work, or the struggle of finding a trsuted person to watch ut for our cat while we are on vacation. The tasks are easy, so why not to automate them? Our category called Service robots help in just the same thing. The products of this lineup represent some of the fields, in which robotics found a way to make your job easier. In here you can find scrubber robots, service robots, informant robot, and other helpers who will satisfy your needs so the only thing you need to worry about is the date of your next vacation. Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.
+
+                    </p>
+                    <a href="{{ url_for('servicerobotics') }}" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/Educ.jpg') }}" alt="Produit 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Educational Robotics</h3>
+                        <h5>The next evolution of education for all ages.</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        As artificial intelligence getting more and more sophisticated algorithms to support the journey of studying, so does the robots, which intentions are not only to make children and grown-ups understand the basic concepts, but to have fun in the process too! There are many interesting solutions in the introduction to robotics, which are now combined with the capabilities of artificial intelligence. This improvement makes educational robots more intelligent, more helpful, and more supportive to the students. In the educational robotics section, you can find robots with skills for learning the most crucial concept of how robots work and how can you program them to suit your needs, as well as very advanced robotic kits, so you could build your very own intelligent robot, with the support for low level programming! Throughout the journey, we would like to help you with understanding every phrase and parameter of each categories, so you can find a description for each category on the top of the corresponding menu tab.                    </p>
+                    <a href="{{ url_for('educrobotics') }}" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="hero-line">
+
+
+    <div class="hero-text">
+        <h1 class="title-black">Welcome to world of innovation!</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <iframe width="1120" height="628" src="https://www.youtube.com/embed/JH3zdeufcR8?si=-t6zRXYQVWZhkQDO" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <hr class="hero-line">
+
+
+    <div class="hero-text">
+        <h1 class="title-black">Find us over there too!</h1>
+    </div>
+
+
+
+
+    <section class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/Indus.jpg') }}" alt="Produit 1" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Articule 1</h3>
+                        <h5>short desc articule 1</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        Text of the article
+                    </p>
+                    <a href="#" class="ui primary button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/Indus.jpg') }}" alt="Produit 2" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Articule 2</h3>
+                        <h5>short desc articule 2</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        Text of the article
+                    </p>
+                    <a href="#" class="ui primary button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="{{ url_for('static', filename='images/Indus.jpg') }}" alt="Produit 3" class="card-img-top">
+                    <div class="card-body">
+                        <h3>Articule 3</h3>
+                        <h5>short desc articule 3</h5>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>
+                        Text of the article
+                    </p>
+                    <a href="#" class="ui primary button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="newsletter-section">
+        <form class="newsletter-form">
+          <div class="form-group">
+            <label for="newsletterEmail">Subscribe to our Newsletter</label>
+            <input type="email" class="form-control" id="newsletterEmail" aria-describedby="emailHelp" placeholder="Enter your email" required>
+            <small id="emailHelp" class="form-text text-muted">Stay updated with the latest news and offers!</small>
+          </div>
+          <button type="submit" class="btn btn-success">Subscribe</button>
+        </form>
+      </section>
+      
+
+
+
+      <div class="hero-text">
+        <h1 class="title-black">Companies</h1>
+    </div>
+
+
+
+
+
+    <div class="image-slider">
+        <div class="image-track">
+            <img src="{{ url_for('static', filename='images/UBT.png') }}" alt="UBT">
+            <img src="{{ url_for('static', filename='images/Dobot.png') }}" alt="Dobot">
+            <img src="{{ url_for('static', filename='images/KABAM Logo (Blue).png') }}" alt="Kabam">
+            <img src="{{ url_for('static', filename='images/Sparkoz.png') }}" alt="Sparkoz">
+            <img src="{{ url_for('static', filename='images/MuzixAudio.png') }}" alt="MuzixAudio">
+            <img src="{{ url_for('static', filename='images/MuzixGroup.png') }}" alt="MuzixGroup">
+        </div>
+    </div>
+    
+
+
+    <footer>
+        <p>&copy; 2025 MZX Robotics. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+
+
+
+
+
+</body>
+</html>

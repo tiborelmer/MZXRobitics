@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Robotics - MZX Robotics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Traduction</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,es,de,it,ja,hu,fr', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .text-container {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+            padding-left: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .section-header {
+            font-size: 2rem;
+            color: #0056b3;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .text-container h2, .text-container h3 {
+            font-weight: 600;
+            color: #0056b3;
+        }
+
+        .pagination {
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .pagination .page-item {
+            margin: 0 5px;
+        }
+
+        .page-link {
+            border-radius: 50px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .page-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card img {
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .card-text {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-header {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="language-selector">
+                <select class="form-select" id="languageSelect">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="es">🇪🇸 Español</option>
+                </select>
+            </div>
+            <div class="cart">
+                <a href="#" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> <span>Cart (0)</span>
+                </a>
+            </div>
+            <div class="user-auth">
+                <a href="#" class="btn btn-outline-primary">Login</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h3 class="title-black">MZX Robotics</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('products') }}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Shipping</a></li>
+                            <li><a class="dropdown-item" href="#">Payment</a></li>
+                            <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="google-translate-bar">
+            <div id="google_translate_element"></div>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h1 class="section-header text-center">Educational Robotics</h1>
+        <div class="text-container">
+<p>
+Educational robots play an increasingly important role in modern learning environments. Designed to introduce students to the basics of robotics, programming, and computer science, these educational tools make learning interactive and fun. By integrating robots into education, teachers can spark students' curiosity, develop critical thinking skills, and prepare them for future technological challenges.
+</p>
+
+<p>
+Educational robots are found in primary schools, secondary schools, and even university programs. They cover a wide range of applications, from basic concepts of logic and programming to more advanced projects involving artificial intelligence and automation.
+</p>
+
+<h2>Types of Educational Robots</h2>
+
+<h3>Simple Programmable Robots</h3>
+<p>
+These robots are designed for young learners and are often used in primary schools. They are easy to handle and program, with intuitive user interfaces.
+</p>
+
+<h3>Modular Robots</h3>
+<p>
+Modular robots allow students to build their own robots using kits with various components. They offer greater flexibility and help students understand engineering and electronics principles.
+</p>
+
+<h3>Humanoid Robots</h3>
+<p>
+Humanoid robots, equipped with movement capabilities and sometimes voice recognition, are used to teach more advanced concepts, including social robotics and human-machine interaction.
+</p>
+
+<h2>Accessories and Software</h2>
+<p>
+Educational robots are often accompanied by educational software that allows students to program them using visual or textual languages. This software can be adapted to different skill levels, from block-based programming for beginners to more advanced languages like Python or C++.
+</p>
+
+<h2>Dobot and UBTECH: Leaders in Educational Robots</h2>
+<p>
+Brands like Dobot and UBTECH play a key role in the innovation and democratization of educational robots. Dobot offers versatile robotic arms, suitable for STEM projects and learning programming and automation. UBTECH, on the other hand, is known for its humanoid and modular robots, which make learning robotics engaging and accessible at all levels.
+</p>
+
+<p>
+Thanks to their advanced technological solutions, Dobot and UBTECH enable teachers to provide rich and immersive learning experiences, tailored to the needs of students of all ages.
+</p>
+
+        </div>
+        
+    </section>
+
+
+
+    
+
+
+
+
+<section class="container my-5">
+    <div class="d-flex gap-3 overflow-auto flex-nowrap py-3">
+        <div class="card shadow-sm border-0" style="min-width: 16rem;">
+            <a href="Humanoid.html" class="text-decoration-none text-dark">
+                <div style="background-image: url('static/images/waiter_robot_icon_400x400.jpg'); height: 180px; background-size: cover; background-position: center; border-top-left-radius: .5rem; border-top-right-radius: .5rem;"></div>
+                <div class="card-body text-center bg-white">
+                    <h5 class="card-title mb-0">Humanoid</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0" style="min-width: 16rem;">
+            <a href="other_robot.html" class="text-decoration-none text-dark">
+                <div style="background-image: url('static/images/facility.jpg'); height: 180px; background-size: cover; background-position: center; border-top-left-radius: .5rem; border-top-right-radius: .5rem;"></div>
+                <div class="card-body text-center bg-white">
+                    <h5 class="card-title mb-0">Other Robot</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0" style="min-width: 16rem;">
+            <a href="Building_block_like.html" class="text-decoration-none text-dark">
+                <div style="background-image: url('static/images/Building.jpg'); height: 180px; background-size: cover; background-position: center; border-top-left-radius: .5rem; border-top-right-radius: .5rem;"></div>
+                <div class="card-body text-center bg-white">
+                    <h5 class="card-title mb-0">Building Block Like</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0" style="min-width: 16rem;">
+            <a href="Desktop_Robotics_edu.html" class="text-decoration-none text-dark">
+                <div style="background-image: url('static/images/Desktop.jpg'); height: 180px; background-size: cover; background-position: center; border-top-left-radius: .5rem; border-top-right-radius: .5rem;"></div>
+                <div class="card-body text-center bg-white">
+                    <h5 class="card-title mb-0">Desktop Robotic Arms</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0" style="min-width: 16rem;">
+            <a href="Accessories_edu.html" class="text-decoration-none text-dark">
+                <div style="background-image: url('static/images/Accessories.jpg'); height: 180px; background-size: cover; background-position: center; border-top-left-radius: .5rem; border-top-right-radius: .5rem;"></div>
+                <div class="card-body text-center bg-white">
+                    <h5 class="card-title mb-0">Accessories</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="container mt-4">
+    <form method="get" action="{{ url_for('educrobotics') }}" class="mb-3 d-flex justify-content-end">
+        <label for="sort" class="me-2 fw-bold">Sort by:</label>
+        <select name="sort" id="sort" class="form-select w-auto me-2" onchange="this.form.submit()">
+            <option value="">Select</option>
+            <option value="price_asc" {% if request.args.get('sort') == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
+            <option value="price_desc" {% if request.args.get('sort') == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
+            <option value="name_asc" {% if request.args.get('sort') == 'name_asc' %}selected{% endif %}>Name: A to Z</option>
+            <option value="name_desc" {% if request.args.get('sort') == 'name_desc' %}selected{% endif %}>Name: Z to A</option>
+        </select>
+    </form>
+
+
+
+
+    <div class="container mt-4">
+        <div class="card-container">
+            {% for product in products_educ %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/' + product.image) }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text"><strong>${{ product.price }}</strong></p>
+                    <a href="{{ url_for('product_detail', product_id=product.id) }}" class="btn btn-primary">See More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            {% if page > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('industrialrobotics', page=page-1) }}">Previous</a>
+                </li>
+            {% endif %}
+
+            {% for p in range(1, total_pages + 1) %}
+                <li class="page-item {% if p == page %}active{% endif %}">
+                    <a class="page-link" href="{{ url_for('industrialrobotics', page=p) }}">{{ p }}</a>
+                </li>
+            {% endfor %}
+
+            {% if page < total_pages %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('industrialrobotics', page=page+1) }}">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 MZX Robotics. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
